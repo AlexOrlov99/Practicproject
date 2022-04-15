@@ -7,18 +7,25 @@ from . models import (
     Task,
 )
 
-class TaskAdmin(admin, ModelAdmin):
-    readonly_fields = (
-        'datetime_created',
-        'datetime_lifetime',
-        'datetime_deleted',
-        )
-    list_display = (
-        'todo',
-        'user',
-        'active',
-    )
+# class TaskAdmin(admin.ModelAdmin):
+#     readonly_fields = (
+#         'datetime_created',
+#         'datetime_lifetime',
+#         'datetime_deleted',
+#         )
+#     list_display = (
+#         'todo',
+#         'user',
+#         'active',
+#     )
+# admin.site.register(
+#     Task, TaskAdmin
+# )    
+# Register your models here.
+class TaskAdmin(admin.ModelAdmin):
+    pass
+
+
 admin.site.register(
     Task, TaskAdmin
-)    
-# Register your models here.
+)

@@ -11,7 +11,6 @@ class Task(AbstractClass):
     TASK_NAME_MAX_LENGTH = 30
 
     todo = models.CharField(
-        verbose_name='Задание',
         max_length = TASK_NAME_MAX_LENGTH
     )
 
